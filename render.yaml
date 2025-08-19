@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: transcripto-whisper
+    env: python
+    plan: starter
+    region: frankfurt
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port 10000
+    envVars:
+      - key: WHISPER_MODEL
+        value: small
+      - key: WHISPER_LANGUAGE
+        value: es
+    healthCheckPath: /health
+    autoDeploy: true
