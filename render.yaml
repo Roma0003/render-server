@@ -13,3 +13,4 @@ services:
         value: es
     healthCheckPath: /health
     autoDeploy: true
+    pythonVersion: 3.10
