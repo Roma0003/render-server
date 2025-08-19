@@ -1,3 +1,6 @@
+build:
+  pythonVersion: 3.10
+
 services:
   - type: web
     name: transcripto-whisper
@@ -13,4 +16,3 @@ services:
         value: es
     healthCheckPath: /health
     autoDeploy: true
-    pythonVersion: 3.10
